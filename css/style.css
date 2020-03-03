@@ -6391,7 +6391,8 @@ section {
 }
 
 .container {
-  width: 940px;
+  max-width: 960px;
+  padding: 0 10px;
   margin: 0 auto;
 }
 
@@ -6426,10 +6427,11 @@ section {
   width: 40px;
   height: 40px;
   margin: 0 5px;
-  border: 2px solid white;
+  border: 1px solid white;
   border-radius: 50%;
-  padding-top: 8px;
+  padding-top: 11px;
   margin-bottom: 20px;
+  font-size: 16px;
 }
 
 .header {
@@ -6446,7 +6448,7 @@ section {
 
 .header__tel {
   width: 210px;
-  font-size: 14px;
+  font-size: 1.4rem;
   text-align: right;
 }
 
@@ -6496,7 +6498,7 @@ section {
 }
 
 .header .social a:hover {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .logo {
@@ -6506,4 +6508,16 @@ section {
   justify-content: space-between;
   -webkit-box-align: center;
   align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .header__button {
+    margin: 60px 0 100px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  html {
+    font-size: 50%;
+  }
 }

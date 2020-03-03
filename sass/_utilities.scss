@@ -30,7 +30,8 @@ section {
 }
 
 .container {
-  width: 940px;
+  max-width: 960px;
+  padding: 0 10px;
   margin: 0 auto;
 }
 
@@ -60,9 +61,16 @@ section {
     width: 40px;
     height: 40px;
     margin: 0 5px;
-    border: 2px solid white;
+    border: 1px solid white;
     border-radius: 50%;
-    padding-top: 8px;
+    padding-top: 11px;
     margin-bottom: 20px;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  html {
+    font-size: 50%;
   }
 }

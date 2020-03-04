@@ -50,6 +50,7 @@ section {
   color: $main-color;
   @include bold;
   cursor: pointer;
+  transition: background 0.3s;
 }
 
 .social {
@@ -66,6 +67,7 @@ section {
     padding-top: 11px;
     margin-bottom: 20px;
     font-size: 16px;
+    transition: background 0.3s;
   }
 }
 

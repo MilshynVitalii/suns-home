@@ -16,6 +16,15 @@ body {
   font-size: 1.8rem;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @include medium;
+}
+
 img {
   width: 100%;
   height: auto;
@@ -36,9 +45,21 @@ section {
 }
 
 .section-title {
+  position: relative;
   text-align: center;
   font-size: 3.6rem;
   @include medium;
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: -20px;
+    width: 120px;
+    height: 6px;
+    background: url(../img/title-border.png);
+    transform: translateX(-50%);
+  }
 }
 
 .main-button {

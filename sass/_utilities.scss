@@ -63,8 +63,10 @@ section {
 }
 
 .main-button {
+  display: block;
   text-transform: uppercase;
-  padding: 10px 0;
+  padding: 15px 0 10px;
+  margin: 0 auto;
   font-size: 12px;
   text-align: center;
   border: 2px solid $main-color;
@@ -73,6 +75,10 @@ section {
   @include bold;
   cursor: pointer;
   transition: background 0.3s;
+  &:hover {
+    background-color: $main-color;
+    color: white;
+  }
 }
 
 .social {

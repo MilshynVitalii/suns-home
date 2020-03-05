@@ -1,6 +1,6 @@
 .journey {
   position: relative;
-  border-bottom: 0;
+  padding-bottom: 0;
   overflow: hidden;
   &::after {
     content: "";
@@ -63,7 +63,13 @@
 }
 
 @media screen and (max-width: 576px) {
-  .journey__content {
-    padding: 10px;
+  .journey {
+    &__content {
+      padding: 10px;
+    }
+
+    &__wrap {
+      padding: 5px;
+    }
   }
 }

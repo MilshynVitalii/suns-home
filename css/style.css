@@ -6428,8 +6428,10 @@ section {
 }
 
 .main-button {
+  display: block;
   text-transform: uppercase;
-  padding: 10px 0;
+  padding: 15px 0 10px;
+  margin: 0 auto;
   font-size: 12px;
   text-align: center;
   border: 2px solid #fd8329;
@@ -6440,6 +6442,11 @@ section {
   cursor: pointer;
   -webkit-transition: background 0.3s;
   transition: background 0.3s;
+}
+
+.main-button:hover {
+  background-color: #fd8329;
+  color: white;
 }
 
 .social {
@@ -6511,7 +6518,7 @@ section {
 
 .header__button {
   width: 300px;
-  margin: 80px 0 140px;
+  margin: 80px auto 140px;
   padding: 20px 0 15px;
   font-size: inherit;
   color: white;
@@ -6626,7 +6633,7 @@ section {
 
 .journey {
   position: relative;
-  border-bottom: 0;
+  padding-bottom: 0;
   overflow: hidden;
 }
 
@@ -6696,6 +6703,54 @@ section {
   margin-bottom: 20px;
 }
 
+.schedule__wrap {
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 8rem;
+}
+
+.schedule__item {
+  flex-basis: calc(25% - 20px);
+  min-width: 200px;
+  padding: 20px;
+  margin: 10px;
+  background-color: #fff8e6;
+  text-align: center;
+}
+
+.schedule__button {
+  width: 100%;
+  max-width: 200px;
+}
+
+.schedule__time {
+  display: inline-block;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.schedule__link {
+  display: inline-block;
+  margin: 15px 0;
+  font-size: 12px;
+  color: #5a56af;
+}
+
+.schedule__link:hover {
+  text-decoration: none;
+}
+
+.schedule__link:active {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 920px) {
+  .schedule__item {
+    flex-basis: calc(33% - 20px);
+  }
+}
+
 @media screen and (max-width: 768px) {
   .header__button {
     margin: 60px 0 100px;
@@ -6721,6 +6776,10 @@ section {
     -webkit-box-pack: space-evenly;
     justify-content: space-evenly;
   }
+
+  .schedule__item {
+    flex-basis: calc(50% - 20px);
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -6743,5 +6802,13 @@ section {
 
   .journey__content {
     padding: 10px;
+  }
+
+  .journey__wrap {
+    padding: 5px;
+  }
+
+  .schedule__item {
+    flex-basis: calc(100% - 20px);
   }
 }

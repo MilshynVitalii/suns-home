@@ -6631,13 +6631,15 @@ section {
   transform: translateX(-20%);
 }
 
-.journey {
+.journey,
+.plan {
   position: relative;
   padding-bottom: 0;
   overflow: hidden;
 }
 
-.journey::after {
+.journey::after,
+.plan::after {
   content: "";
   display: block;
   position: absolute;
@@ -6649,9 +6651,39 @@ section {
   z-index: -1;
 }
 
-.journey__content {
-  position: relative;
+.journey .journey__content,
+.plan .journey__content {
   background: url(../img/journey/journey-bg.jpg) no-repeat center;
+}
+
+.journey .journey__content::before,
+.plan .journey__content::before {
+  background: url(../img/journey/journey-bgL.jpg);
+}
+
+.journey .journey__content::after,
+.plan .journey__content::after {
+  background: url(../img/journey/journey-bgR.jpg);
+}
+
+.journey .plan__content,
+.plan .plan__content {
+  background: url(../img/plan/plan-bg.jpg) no-repeat center;
+}
+
+.journey .plan__content::before,
+.plan .plan__content::before {
+  background: url(../img/plan/plan-bgL.jpg);
+}
+
+.journey .plan__content::after,
+.plan .plan__content::after {
+  background: url(../img/plan/plan-bgR.jpg);
+}
+
+.journey__content,
+.plan__content {
+  position: relative;
   height: 525px;
   padding: 30px;
   margin-top: 10rem;
@@ -6659,7 +6691,9 @@ section {
 }
 
 .journey__content::before,
-.journey__content::after {
+.journey__content::after,
+.plan__content::before,
+.plan__content::after {
   content: "";
   display: block;
   position: absolute;
@@ -6670,17 +6704,18 @@ section {
   transform: translateY(-50%);
 }
 
-.journey__content::before {
+.journey__content::before,
+.plan__content::before {
   right: 105%;
-  background: url(../img/journey/journey-bgL.jpg);
 }
 
-.journey__content::after {
+.journey__content::after,
+.plan__content::after {
   left: 105%;
-  background: url(../img/journey/journey-bgR.jpg);
 }
 
-.journey__wrap {
+.journey__wrap,
+.plan__wrap {
   display: -webkit-box;
   display: flex;
   -webkit-box-pack: center;
@@ -6692,12 +6727,14 @@ section {
   padding: 10px;
 }
 
-.journey__info {
+.journey__info,
+.plan__info {
   width: 500px;
   text-align: center;
 }
 
-.journey__info-title {
+.journey__info-title,
+.plan__info-title {
   text-transform: uppercase;
   font-size: 26px;
   margin-bottom: 20px;

@@ -1,4 +1,5 @@
-.journey {
+.journey,
+.plan {
   position: relative;
   padding-bottom: 0;
   overflow: hidden;
@@ -14,9 +15,28 @@
     z-index: -1;
   }
 
+  .journey__content {
+    background: url(../img/journey/journey-bg.jpg) no-repeat center;
+    &::before {
+      background: url(../img/journey/journey-bgL.jpg);
+    }
+    &::after {
+      background: url(../img/journey/journey-bgR.jpg);
+    }
+  }
+
+  .plan__content {
+    background: url(../img/plan/plan-bg.jpg) no-repeat center;
+    &::before {
+      background: url(../img/plan/plan-bgL.jpg);
+    }
+    &::after {
+      background: url(../img/plan/plan-bgR.jpg);
+    }
+  }
+
   &__content {
     position: relative;
-    background: url(../img/journey/journey-bg.jpg) no-repeat center;
     height: 525px;
     padding: 30px;
     margin-top: 10rem;
@@ -33,11 +53,9 @@
     }
     &::before {
       right: 105%;
-      background: url(../img/journey/journey-bgL.jpg);
     }
     &::after {
       left: 105%;
-      background: url(../img/journey/journey-bgR.jpg);
     }
   }
 

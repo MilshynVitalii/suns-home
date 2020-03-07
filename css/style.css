@@ -6651,36 +6651,6 @@ section {
   z-index: -1;
 }
 
-.journey .journey__content,
-.plan .journey__content {
-  background: url(../img/journey/journey-bg.jpg) no-repeat center;
-}
-
-.journey .journey__content::before,
-.plan .journey__content::before {
-  background: url(../img/journey/journey-bgL.jpg);
-}
-
-.journey .journey__content::after,
-.plan .journey__content::after {
-  background: url(../img/journey/journey-bgR.jpg);
-}
-
-.journey .plan__content,
-.plan .plan__content {
-  background: url(../img/plan/plan-bg.jpg) no-repeat center;
-}
-
-.journey .plan__content::before,
-.plan .plan__content::before {
-  background: url(../img/plan/plan-bgL.jpg);
-}
-
-.journey .plan__content::after,
-.plan .plan__content::after {
-  background: url(../img/plan/plan-bgR.jpg);
-}
-
 .journey__content,
 .plan__content {
   position: relative;
@@ -6740,6 +6710,30 @@ section {
   margin-bottom: 20px;
 }
 
+.journey__content {
+  background: url(../img/journey/journey-bg.jpg) no-repeat center;
+}
+
+.journey__content::before {
+  background: url(../img/journey/journey-bgL.jpg);
+}
+
+.journey__content::after {
+  background: url(../img/journey/journey-bgR.jpg);
+}
+
+.plan__content {
+  background: url(../img/plan/plan-bg.jpg) no-repeat center;
+}
+
+.plan__content::before {
+  background: url(../img/plan/plan-bgL.jpg);
+}
+
+.plan__content::after {
+  background: url(../img/plan/plan-bgR.jpg);
+}
+
 .schedule__wrap {
   display: -webkit-box;
   display: flex;
@@ -6780,6 +6774,49 @@ section {
 
 .schedule__link:active {
   text-decoration: underline;
+}
+
+.what {
+  font-family: "Muller Light", sans-serif;
+  font-weight: 300;
+}
+
+.what__title {
+  margin-bottom: 10rem;
+}
+
+.what__subtitle {
+  margin: 6rem 0;
+  text-align: center;
+}
+
+.what__details {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.what__item {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  max-width: 620px;
+  margin: 30px auto;
+}
+
+.what__img {
+  flex-shrink: 0;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 4rem;
+}
+
+.what__img img {
+  width: auto;
+  -webkit-transform: translateX(-25%);
+  transform: translateX(-25%);
 }
 
 @media screen and (max-width: 920px) {
@@ -6837,15 +6874,27 @@ section {
     margin-right: 5px;
   }
 
-  .journey__content {
+  .journey__content,
+  .plan__content {
     padding: 10px;
   }
 
-  .journey__wrap {
+  .journey__wrap,
+  .plan__wrap {
     padding: 5px;
   }
 
   .schedule__item {
     flex-basis: calc(100% - 20px);
+  }
+
+  .what__item {
+    flex-wrap: wrap;
+    max-width: 330px;
+    text-align: center;
+  }
+
+  .what__img {
+    margin: 0 auto 15px;
   }
 }

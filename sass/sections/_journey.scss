@@ -15,26 +15,6 @@
     z-index: -1;
   }
 
-  .journey__content {
-    background: url(../img/journey/journey-bg.jpg) no-repeat center;
-    &::before {
-      background: url(../img/journey/journey-bgL.jpg);
-    }
-    &::after {
-      background: url(../img/journey/journey-bgR.jpg);
-    }
-  }
-
-  .plan__content {
-    background: url(../img/plan/plan-bg.jpg) no-repeat center;
-    &::before {
-      background: url(../img/plan/plan-bgL.jpg);
-    }
-    &::after {
-      background: url(../img/plan/plan-bgR.jpg);
-    }
-  }
-
   &__content {
     position: relative;
     height: 525px;
@@ -80,8 +60,29 @@
   }
 }
 
+.journey__content {
+  background: url(../img/journey/journey-bg.jpg) no-repeat center;
+  &::before {
+    background: url(../img/journey/journey-bgL.jpg);
+  }
+  &::after {
+    background: url(../img/journey/journey-bgR.jpg);
+  }
+}
+
+.plan__content {
+  background: url(../img/plan/plan-bg.jpg) no-repeat center;
+  &::before {
+    background: url(../img/plan/plan-bgL.jpg);
+  }
+  &::after {
+    background: url(../img/plan/plan-bgR.jpg);
+  }
+}
+
 @media screen and (max-width: 576px) {
-  .journey {
+  .journey,
+  .plan {
     &__content {
       padding: 10px;
     }

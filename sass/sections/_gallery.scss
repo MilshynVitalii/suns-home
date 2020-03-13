@@ -35,9 +35,6 @@
     display: block;
     width: 150%;
     transform: translateX(-25%);
-    a {
-      font-size: 0;
-    }
   }
 
   &__image-wrap {
@@ -45,6 +42,9 @@
     height: 140px;
     overflow: hidden;
     margin: 10px;
+    a:hover > img {
+      animation: hoverwidth 2s ease-out forwards;
+    }
   }
 
   &__about {
@@ -84,6 +84,15 @@
       margin-right: 10px;
       width: 15px;
     }
+  }
+}
+
+@keyframes hoverwidth {
+  form {
+    width: 150%;
+  }
+  to {
+    width: 200%;
   }
 }
 

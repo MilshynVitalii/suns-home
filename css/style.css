@@ -6867,15 +6867,16 @@ section {
   transform: translateX(-25%);
 }
 
-.gallery__image a {
-  font-size: 0;
-}
-
 .gallery__image-wrap {
   width: 140px;
   height: 140px;
   overflow: hidden;
   margin: 10px;
+}
+
+.gallery__image-wrap a:hover > img {
+  -webkit-animation: hoverwidth 2s ease-out forwards;
+  animation: hoverwidth 2s ease-out forwards;
 }
 
 .gallery__about {
@@ -6925,6 +6926,26 @@ section {
   display: inline-block;
   margin-right: 10px;
   width: 15px;
+}
+
+@-webkit-keyframes hoverwidth {
+  form {
+    width: 150%;
+  }
+
+  to {
+    width: 200%;
+  }
+}
+
+@keyframes hoverwidth {
+  form {
+    width: 150%;
+  }
+
+  to {
+    width: 200%;
+  }
 }
 
 @media screen and (max-width: 920px) {

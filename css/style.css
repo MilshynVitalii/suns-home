@@ -6820,29 +6820,49 @@ section {
   transform: translateX(-25%);
 }
 
+.gallery {
+  padding-top: 10px;
+}
+
 .gallery .container {
   padding: 0;
 }
 
 .gallery-wrap {
+  position: relative;
   display: -webkit-box;
   display: flex;
   -webkit-box-pack: justify;
   justify-content: space-between;
 }
 
+.gallery-wrap::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  max-width: 730px;
+  height: 260px;
+  left: -20px;
+  top: -10px;
+  background-color: #faf2e4;
+  z-index: -1;
+}
+
 .gallery__images {
   display: -webkit-box;
   display: flex;
   flex-wrap: wrap;
-  width: 50%;
-  min-width: 480px;
+  -webkit-box-pack: center;
+  justify-content: center;
+  align-content: flex-start;
+  width: 480px;
   flex-shrink: 0;
 }
 
 .gallery__image {
   display: block;
-  width: 210px;
+  width: 150%;
   -webkit-transform: translateX(-25%);
   transform: translateX(-25%);
 }
@@ -6865,14 +6885,14 @@ section {
 }
 
 .gallery__title {
-  margin-top: 40px;
+  margin-top: 35px;
   font-size: 3rem;
   -moz-text-align-last: left;
   text-align-last: left;
 }
 
 .gallery__subtitle {
-  margin: 5px 0 35px;
+  margin: 5px 0 30px;
   font-size: 14px;
   font-family: "Muller Light", sans-serif;
   font-weight: 300;
@@ -6888,6 +6908,7 @@ section {
   flex-wrap: wrap;
   -webkit-box-pack: justify;
   justify-content: space-between;
+  margin-top: 4rem;
 }
 
 .gallery__list li {
@@ -6897,18 +6918,32 @@ section {
   display: flex;
   -webkit-box-align: start;
   align-items: flex-start;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .gallery__list img {
   display: inline-block;
   margin-right: 10px;
-  width: 20px;
+  width: 15px;
 }
 
 @media screen and (max-width: 920px) {
   .schedule__item {
     flex-basis: calc(33% - 20px);
+  }
+
+  .gallery-wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+  }
+
+  .gallery__images {
+    width: 100%;
+    max-width: 640px;
+    margin: 40px auto 0;
+    -webkit-box-ordinal-group: 2;
+    order: 1;
   }
 }
 
@@ -6983,5 +7018,9 @@ section {
 
   .what__img {
     margin: 0 auto 15px;
+  }
+
+  .gallery__list li {
+    max-width: 150px;
   }
 }

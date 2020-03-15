@@ -6961,15 +6961,11 @@ section {
 }
 
 .instructors__slider {
-  position: relative;
   margin: 20px 0;
-  height: 541px;
-  overflow: hidden;
 }
 
 .instructors__slide {
-  position: absolute;
-  bottom: 0;
+  position: relative;
 }
 
 .instructors__slide img {
@@ -6981,6 +6977,8 @@ section {
   display: flex;
   -webkit-box-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  align-items: center;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -7002,7 +7000,44 @@ section {
 
 .instructors__name {
   font-size: 2.5rem;
-  margin-bottom: 20px;
+  margin-bottom: 2rem;
+  margin-right: 10px;
+}
+
+.slide {
+  position: relative;
+  overflow: hidden;
+}
+
+.slide__height {
+  width: 100%;
+  padding-top: 57.5%;
+}
+
+.slide__content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+@-webkit-keyframes hov {
+  from {
+    top: calc(100% - 95px);
+  }
+
+  to {
+    top: -95px;
+  }
+}
+
+@keyframes hov {
+  from {
+    top: calc(100% - 95px);
+  }
+
+  to {
+    top: -95px;
+  }
 }
 
 @media screen and (max-width: 920px) {
@@ -7054,6 +7089,18 @@ section {
   .schedule__item {
     flex-basis: calc(50% - 20px);
   }
+
+  .instructors__descr {
+    padding: 20px 30px;
+  }
+
+  .instructors__proficiency {
+    flex-basis: 40%;
+  }
+
+  .instructors__info {
+    flex-basis: 50%;
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -7100,5 +7147,32 @@ section {
 
   .gallery__list li {
     max-width: 150px;
+  }
+
+  .instructors__descr {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-align: start;
+    align-items: flex-start;
+    font-size: 12px;
+    top: calc(100% - 95px);
+  }
+
+  .instructors__descr:hover {
+    -webkit-animation: hov 0.5s forwards;
+    animation: hov 0.5s forwards;
+  }
+
+  .instructors__proficiency {
+    flex-basis: unset;
+    border-right: none;
+    border-bottom: 1px solid white;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+  }
+
+  .instructors__info {
+    justify-self: center;
   }
 }

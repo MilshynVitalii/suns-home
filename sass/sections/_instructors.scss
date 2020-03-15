@@ -6,15 +6,11 @@
   }
 
   &__slider {
-    position: relative;
     margin: 20px 0;
-    height: 541px;
-    overflow: hidden;
   }
 
   &__slide {
-    position: absolute;
-    bottom: 0;
+    position: relative;
     img {
       display: block;
     }
@@ -23,6 +19,7 @@
   &__descr {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -44,6 +41,70 @@
 
   &__name {
     font-size: 2.5rem;
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
+    margin-right: 10px;
+  }
+}
+
+.slide {
+  position: relative;
+  overflow: hidden;
+  &__height {
+    width: 100%;
+    padding-top: 57.5%;
+  }
+
+  &__content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .instructors {
+    &__descr {
+      padding: 20px 30px;
+    }
+    &__proficiency {
+      flex-basis: 40%;
+    }
+
+    &__info {
+      flex-basis: 50%;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .instructors {
+    &__descr {
+      flex-direction: column;
+      align-items: flex-start;
+      font-size: 12px;
+      top: calc(100% - 95px);
+      &:hover {
+        animation: hov 0.5s forwards;
+      }
+    }
+    &__proficiency {
+      flex-basis: unset;
+      border-right: none;
+      border-bottom: 1px solid white;
+      margin-bottom: 10px;
+      padding-bottom: 10px;
+    }
+    &__info {
+      justify-self: center;
+    }
+  }
+}
+
+@keyframes hov {
+  from {
+    top: calc(100% - 95px);
+  }
+  to {
+    top: -95px;
   }
 }
